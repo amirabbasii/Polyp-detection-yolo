@@ -1,3 +1,6 @@
+from attention_module import create_attention_model
+from ultralytics import YOLO
+
 def create_attention_model(pretrained_size='m'):
     model = YOLO(f'yolov8{pretrained_size}.pt')
     return add_attention_to_model(model)
@@ -35,6 +38,4 @@ def train_with_transfer_learning(
     results = model.train(**train_args)
     return model, results
 
-model, results = train_with_transfer_learning()
-predictions = model.val(data="VOC.yaml")
 
