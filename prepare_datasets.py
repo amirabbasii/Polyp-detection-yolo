@@ -184,3 +184,7 @@ def prepare_cvc_colondb():
         cv2.imwrite(f'data/images/{section}/CVC-ColonDB_{name.replace("tif", "jpg")}', image)
         with open(f'data/labels/{section}/CVC-ColonDB_{name.replace(".tif", ".txt")}', 'w') as f:
             f.write(ans)
+def save_yaml():
+    conf = "train: /content/data/images/train\n\nval: /content/data/images/test\n\ntest: /content/data/images/test\n\nnc: 1\n\nnames: ['x']"
+    with open("VOC.yaml", "w") as f:
+        f.write(conf)
