@@ -188,3 +188,9 @@ def save_yaml():
     conf = "train: /content/data/images/train\n\nval: /content/data/images/test\n\ntest: /content/data/images/test\n\nnc: 1\n\nnames: ['x']"
     with open("VOC.yaml", "w") as f:
         f.write(conf)
+def prepare_all_datasets():
+    prepare_kvasir_seg()
+    prepare_cvc_clinicdb()
+    prepare_etis()
+    prepare_cvc_colondb()
+    save_yaml()
