@@ -28,12 +28,6 @@ The dataset preparation process includes:
 - Dividing the data into training, validation, and test sets.
 - Resizing images and normalizing them for YOLO input.
 
-## Installation
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/yourusername/polyp-detection-yolo.git
-cd polyp-detection-yolo
 
 ## Results
 After training the model, the system can identify polyps in colonoscopy images, providing bounding boxes around the detected polyps. Below are the evaluation results on the test dataset:
