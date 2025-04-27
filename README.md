@@ -34,3 +34,15 @@ The dataset preparation process includes:
 ```bash
 git clone https://github.com/yourusername/polyp-detection-yolo.git
 cd polyp-detection-yolo
+
+## Results
+After training the model, the system can identify polyps in colonoscopy images, providing bounding boxes around the detected polyps. Below are the evaluation results on the test dataset:
+
+| Metric       | Value |
+|--------------|-------|
+| **Precision (P)** | 0.963 |
+| **Recall (R)**    | 0.917 |
+| **mAP50**         | 0.981 |
+| **mAP50-95**      | 0.787 |
+
+
