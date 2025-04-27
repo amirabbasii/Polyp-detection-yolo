@@ -1,6 +1,8 @@
 import argparse
 from attention_module import create_attention_model
 from ultralytics import YOLO
+from prepare_datasets import prepare_all_datasets
+
 
 def create_attention_model(pretrained_size='m'):
     model = YOLO(f'yolov8{pretrained_size}.pt')
@@ -50,6 +52,9 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # Call the training function with the arguments from the command line
+    
+def main():
+    prepare_all_datasets()
     model, results = train_with_transfer_learning(
         pretrained_size=args.pretrained_size,
         custom_dataset=args.custom_dataset,
@@ -57,3 +62,4 @@ if __name__ == '__main__':
         batch_size=args.batch_size,
         imgsz=args.imgsz
     )
+    predictions=model.val(data="VOC.yaml")
