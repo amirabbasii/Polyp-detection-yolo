@@ -21,14 +21,6 @@ This project uses the following datasets:
 
 The datasets contain images and ground truth masks, which are used to train and validate the model.
 
-### Dataset Preparation
-
-The dataset preparation process includes:
-- Converting mask images to bounding boxes.
-- Dividing the data into training, validation, and test sets.
-- Resizing images and normalizing them for YOLO input.
-
-
 ## Results
 After training the model, the system can identify polyps in colonoscopy images, providing bounding boxes around the detected polyps. Below are the evaluation results on the test dataset:
 
