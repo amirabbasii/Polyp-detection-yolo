@@ -36,3 +36,5 @@ def train_with_transfer_learning(
     return model, results
 
 model, results = train_with_transfer_learning()
+predictions = model.val(data="VOC.yaml")
+
